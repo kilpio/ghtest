@@ -5,6 +5,14 @@ snapshot='snapshot-1.'${1}
 
 git checkout master
 git pull
+echo $(date) >> noff
+git stage noff
+git commit -m "update noff"
+git push
+
+
+git checkout master
+git pull
 git checkout -B ${snapshot}
 echo $(date) >> noff
 git stage noff
