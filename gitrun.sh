@@ -18,5 +18,6 @@ echo $(date) >> noff
 git stage noff
 git commit -m "Fix stable as it is in ${snapshot}"
 git push
+git checkout master
 
 
