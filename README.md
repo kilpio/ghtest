@@ -1,3 +1,3 @@
 # ghtest
 initial commit
-master
+snapshot-1.2
