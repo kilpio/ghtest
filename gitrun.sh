@@ -27,15 +27,30 @@ cat noff
 git checkout master
 git pull
 #git checkout master -- .
-git merge -s ours --no-commit stable
+git branch -D stable
+git checkout -b stable
 echo 'stable' >> noff
 echo $(date) >> noff
 git stage noff
 git commit -m "Fix stable as it is in ${snapshot}"
-git checkout stable
-git merge master
-git push
+git push -f origin stable
 cat noff
 git checkout master
 cat noff
+
+
+
+
+
+# git merge -s ours --no-commit stable
+# echo 'stable' >> noff
+# echo $(date) >> noff
+# git stage noff
+# git commit -m "Fix stable as it is in ${snapshot}"
+# git checkout stable
+# git merge master
+# git push
+# cat noff
+# git checkout master
+# cat noff
 
