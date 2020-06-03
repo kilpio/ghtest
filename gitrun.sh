@@ -24,7 +24,7 @@ git push --set-upstream origin ${snapshot}
 git push
 cat noff
 
-git checkout master
+git checkout ${snapshot}
 git pull
 #git checkout master -- .
 git branch -D stable
